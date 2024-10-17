@@ -203,7 +203,18 @@
       asNavFor: '.main_slider_box',
       dots: false,
       centerMode: false,
+      arrows: false,
       focusOnSelect: true,
+      vertical: true, // Default to vertical on desktop
+      responsive: [
+            {
+                breakpoint: 992, // Mobile breakpoint
+                settings: {
+                    vertical: false, // Horizontal slider for mobile
+                    slidesToShow: 4, // Adjust number of visible slides for smaller screens
+                }
+            }
+        ]
     });
     var $navSlider = $('.nav_slider_box');
     var navOffset = $navSlider.offset().top;
